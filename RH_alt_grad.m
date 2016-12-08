@@ -24,7 +24,7 @@ W_zs = zeros(steps,runs);
 
 for i = 1:runs;
     disp_fun(z) = (0.1*i)*z; %linear disp_fun
-    RH_DOC3; %giving DOC
+    RH_DOC; %giving DOC
     DOCs(:,i) = DOC;
     dx_means(i) = dx_mean; %storing all dx_means in matrix
 
