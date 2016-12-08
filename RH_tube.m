@@ -1,7 +1,5 @@
-load('/Volumes/TRANSCEND/Uni/MATLAB/br_split_mat2/frame1.mat');
-load('/Volumes/TRANSCEND/Uni/MATLAB/br_split_mat2/frame2.mat');
-%load('D:\Uni\MATLAB\PIV Stuff\br_split_mat2\frame1.mat');
-%load('D:\Uni\MATLAB\PIV Stuff\br_split_mat2\frame2.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Bf_images/frame1.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Bf_images/frame2.mat');
 
 frame1 = frame1(:,:,59:158); %choosing a square number of images
 frame2 = frame2(:,:,59:158); %with the focal plane at the center

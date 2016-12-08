@@ -1,5 +1,5 @@
-load('/Users/Zwiebelsalz/Documents/PIV-Project/Flr_images/frame1.mat');
-load('/Users/Zwiebelsalz/Documents/PIV-Project/Flr_images/frame2.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Bf_images/frame1.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Bf_images/frame2.mat');
 
 profile on
 clear CC_row

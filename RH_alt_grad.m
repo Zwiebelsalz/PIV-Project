@@ -1,7 +1,5 @@
-load('/Volumes/TRANSCEND/Uni/MATLAB/flr_split_mat2/frame1.mat');
-load('/Volumes/TRANSCEND/Uni/MATLAB/flr_split_mat2/frame2.mat');
-%load('D:\Uni\MATLAB\br_split_mat2\frame1.mat');
-%load('D:\Uni\MATLAB\br_split_mat2\frame2.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Flr_images/frame1.mat');
+load('/Users/Zwiebelsalz/Documents/PIV-Project/Flr_images/frame2.mat');
 
 % frame1 = frame1(:,:,91:120);
 % frame2 = frame2(:,:,91:120);
