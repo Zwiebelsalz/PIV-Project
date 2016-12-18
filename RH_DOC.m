@@ -16,7 +16,8 @@ for k = 1:steps
     image2 = RH_shift(frame2(:,:,k), displacement, (max_disp - 1) * img_width);
     
     [~, CC_single(k,:)] = RH_offset(image1, image2);
-    %CC_single(k,:) = [zeros(1,displacement),CC_single1(k,:),zeros(1,img_width-displacement)];
+    
+    
     waitbar(k/steps);
 end
 
@@ -28,6 +29,6 @@ for k = 1:steps
     CC_row = sum(CC_single(1:steps~=k,:)); % excluding layer k
     DOC(k) = RH_cc_offset(CC_row, img_width);
 end
-DOC = DOC - dx_mean;
+DOC = dx_mean - DOC;
 
 close(wb);

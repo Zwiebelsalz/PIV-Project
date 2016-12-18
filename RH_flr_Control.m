@@ -28,7 +28,7 @@ syms z
 syms d
 
 %disp_fun(z) = 400 - 0.02*(z - 32.0779)^2; %parabolic disp_fun
-disp_fun(z) = 1.3*z; %linear disp_fun
+disp_fun(z) = 0.35*z; %linear disp_fun
 
 RandomMatrix = zeros(sz_img,sz_img,4);
 RPMatrix = zeros(sz_img);
@@ -54,24 +54,21 @@ end
 z_focus = double(mean(z_focus(:)));
 
 
-x = transpose((1:steps) - z_focus); %setting z_focus to be 0
+z = transpose((1:steps) - z_focus); %setting z_focus to be 0
 
-W_z = DOC ./ (double(disp_fun(x)) + DOC);
+%W_z = DOC ./ (double(disp_fun(x)) + DOC);
+W_z = DOC ./ (double(disp_fun(z+z_focus)) - dx_mean + DOC);
 
-
-%W_z = W_z / dx_mean;% normalising W_z
-
-DOC_number = 4*sqrt(sum(W_z .* x.^2))
+DOC_number = 4*sqrt(sum(W_z .* z.^2))
 
 subplot(3,1,1);
-plot(x,DOC);
+plot(z,DOC);
 subplot(3,1,2);
-%CC_single(round(z_focus),:) = max(CC_single(:));
-imshow(CC_single);
+subplot(3,1,2);
+imagesc(1:length(CC_single),z,CC_single);
 caxis auto;
 colormap jet;
-% plot(polyval(disp_poly, 1:steps));
 subplot(3,1,3);
-plot(x,W_z);
+plot(z,W_z);
 
 
